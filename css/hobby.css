@@ -1,0 +1,206 @@
+.content { background: rgba(255,255,255,.06);}
+.inner {
+	position: relative;
+	left: -80px;
+	top: 30px;
+	-webkit-transition: all 1s ease 0.5s;
+	-moz-transition: all 1s ease 0.5s;
+	-ms-transition: all 1s ease 0.5s;
+	transition: all 1s ease 0.5s;
+}
+.inner.online {
+	-webkit-transform: rotateX(90deg);
+	-moz-transform: rotateX(90deg);
+	-ms-transform: rotateX(90deg);
+	transform: rotateX(90deg);
+}
+.cross {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 100px;
+	height: 2px;
+	background: #FFFFFF;
+	opacity: .5;
+	filter: alpha(opacity=50);
+}
+.cross:before {
+	content: "";
+	position: absolute;
+	top: -50px;
+	left: 50%;
+	width: 2px;
+	height: 100px;
+	margin: 1px 0 0 -1px;
+	background: #FFFFFF;
+}
+.square {
+	display: block;
+	margin: 0 auto;
+	width: 250px;
+	height: 250px;
+	position: relative;
+}
+.mid-box { font-size: 0;margin: -75px 0;}
+.mid-box > .square {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 50px;
+	margin-right: 50px;
+	font-size: 20px;
+}
+.square:before,
+.square:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 0;
+	height: 0;
+	border-top: 125px solid transparent;
+	border-bottom: 125px solid transparent;
+	z-index: 1;
+}
+.square:before {
+	left: 0;
+	border-right: 125px solid #CE8199;
+}
+.square:after {
+	right: 0;
+	border-left: 125px solid #C14B71;
+}
+.square1:before,
+.square4:before {border-right-color: #EFD6DF;}
+.square1:after,
+.square4:after {border-left-color: #FBEAF0;}
+
+.square1 {
+	-webkit-transition: all .5s ease 1.5s;
+	-moz-transition: all .5s ease 1.5s;
+	-ms-transition: all .5s ease 1.5s;
+	transition: all .5s ease 1.5s;
+}
+.square2 {
+	-webkit-transition: all .5s ease 1.6s;
+	-moz-transition: all .5s ease 1.6s;
+	-ms-transition: all .5s ease 1.6s;
+	transition: all .5s ease 1.6s;
+}
+.square3 {
+	-webkit-transition: all .5s ease 1.7s;
+	-moz-transition: all .5s ease 1.7s;
+	-ms-transition: all .5s ease 1.7s;
+	transition: all .5s ease 1.7s;
+}
+.square4 {
+	-webkit-transition: all .5s ease 1.8s;
+	-moz-transition: all .5s ease 1.8s;
+	-ms-transition: all .5s ease 1.8s;
+	transition: all .5s ease 1.8s;
+}
+.square.transfered { opacity: .2;}
+.square1.transfered {
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+			
+}
+.square2.transfered {
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	transform: translateX(100%);
+}
+.square3.transfered {
+	-webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+.square4.transfered {
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+.square-icon {
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding-top: 50%;
+	line-height: 68px;
+	font-size: 52px;
+	font-family: "\5FAE\8F6F\96C5\9ED1";
+	color: #E8217D;
+	text-align: center;
+	-webkit-transition: opacity 1s linear 2.3s;
+	-moz-transition: opacity 1s linear 2.3s;
+	-ms-transition: opacity 1s linear 2.3s;
+	transition: opacity 1s linear 2.3s;
+}
+.square-icon.right {
+	font-size: 46px;
+	color: #FDEFF3;
+}
+.square-label {
+	position: relative;
+	z-index: 3;
+	padding-top: 98px;
+	font-size: 24px;
+	line-height: 22px;
+	color: #FFFFFF;
+	opacity: 1;
+	-webkit-transition: opacity 1s linear 2.3s;
+	-moz-transition: opacity 1s linear 2.3s;
+	-ms-transition: opacity 1s linear 2.3s;
+	transition: opacity 1s linear 2.3s;
+}
+.square1 > .square-label,
+.square4 > .square-label {color: #DE1170;}
+.square-icon.unvisible,
+.square-label.unvisible { opacity: 0;}
+.square-label > .en {
+	font-size: 18px;
+	letter-spacing: 2px; 
+	color: #ECE5E8;
+}
+.square1 > .square-label > .en,
+.square4 > .square-label > .en { color: #844663;}
+.square-para {
+	z-index: 0;
+	position: absolute;
+	top: 98px;
+	left: 108%;
+	line-height: 28px;
+	font-size: 15px;
+	white-space: nowrap;
+	text-align: left;
+	color: #aaa;
+	-webkit-transition: all 1s ease 3.5s;
+	-moz-transition: all 1s ease 3.5s;
+	-ms-transition: all 1s ease 3.5s;
+	transition: all 1s ease 3.5s;
+}
+.square1 > .square-para {left: 92%; top: 50px;}
+.square4 > .square-para { left: 92%; top: auto; bottom: 50px;}
+.left-side {
+	left: auto;
+	right: 105%;
+	text-align: right;
+}
+.square-para.fold {
+	left: 30%;
+	font-size: 0;
+}
+.left-side.fold { right: 30%;}
+.space {
+	float: left;
+	width: 25px;
+	height: 1px;
+}

@@ -1,0 +1,134 @@
+.inner {
+	font-size: 0;
+	text-align: center;
+}
+.contact-item {
+	position: relative;
+	display: inline-block; 
+	vertical-align: middle;
+	width: 320px;
+	height: 320px;
+	text-align: center;
+}
+.contact-mid { margin: 0 -20px;}
+.contact-item > .top,
+.contact-item > .bottom {
+	position: absolute;
+	width: 0;
+	height: 0;	
+	border-radius: 50%;
+}
+.contact-item > .top {
+	z-index: 1;
+	top: 0;
+	left: 0;
+	border-bottom: 160px solid #D680AC;
+	border-left: 160px solid transparent;
+	border-right: 160px solid transparent;
+	-webkit-box-shadow: 0 2px 0 #eaaacb;
+	-moz-box-shadow: 0 2px 0 #eaaacb;
+	-ms-box-shadow: 0 2px 0 #eaaacb;
+	box-shadow: 0 2px 0 #eaaacb;
+	-webkit-transform-origin: 50% 0;
+			transform-origin: 50% 0;
+	-webkit-animation: swing 2s ease 0s infinite;
+			animation: swing 2s ease 0s infinite;
+}
+.contact-item > .top:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -130px;
+	width: 0;
+	height: 0;	
+	border-radius: 50%;
+	border-bottom: 130px solid #E092BA;
+	border-left: 130px solid transparent;
+	border-right: 130px solid transparent;
+}
+.contact-item > .top:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -100px;
+	width: 0;
+	height: 0;	
+	border-radius: 50%;
+	border-bottom: 100px solid #EAA1C6;
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent;
+}
+.contact-item > .bottom {
+	bottom: -20px;
+	left: -60px;
+	border-top: 220px solid #F9ECF3;
+	border-left: 220px solid transparent;
+	border-right: 220px solid transparent;
+	-webkit-box-shadow: 0 -4px 0 #E070A9;
+	-moz-box-shadow: 0 -4px 0 #E070A9;
+	-ms-box-shadow: 0 -4px 0 #E070A9;
+	box-shadow: 0 -4px 0 #E070A9;
+	-webkit-transform-origin: 50% 100%;
+			transform-origin: 50% 100%;
+	-webkit-animation: reSwing 2s ease 0s infinite;
+			animation: reSwing 2s ease 0s infinite;
+}
+.contact-mid > .top { border-bottom-color: #EFDCE5;}
+.contact-mid > .top:before { border-bottom-color: #F5EAEF;}
+.contact-mid > .top:after { border-bottom-color: #FBF7F9;}
+.contact-mid > .bottom { border-top-color: #A94C72;}
+.top > label {
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: -160px;
+	width: 320px;
+	padding-top: 40px;
+	line-height: 120px;
+	font-size: 28px;
+	font-family: "\5FAE\8F6F\96C5\9ED1";
+	color: #FFFFFF;
+}
+.bottom > p {
+	z-index: 2;
+	position: absolute;
+	bottom: 0;
+	left: -160px;
+	width: 320px;
+	padding-bottom: 120px;
+	font-size: 20px;
+	font-family: "\5FAE\8F6F\96C5\9ED1";
+	line-height: 60px;
+	color: #b5004a;
+}
+.contact-mid > .top > label {color: #b5004a;}
+.contact-mid > .bottom > p {color: #FFFFFF;}
+.space { letter-spacing: 1px;}
+
+@keyframes swing {
+	0 { transform: rotate(0deg);}
+	25% { transform: rotate(3deg);}
+	75% { transform: rotate(-3deg);}
+	100% { transform: rotate(0deg);}
+}
+@-webkit-keyframes swing {
+	0 { -webkit-transform: rotate(0deg);}
+	25% { -webkit-transform: rotate(3deg);}
+	75% { -webkit-transform: rotate(-3deg);}
+	100% { -webkit-transform: rotate(0deg);}
+}
+
+@keyframes reSwing {
+	0 { transform: rotate(0deg);}
+	25% { transform: rotate(-3deg);}
+	75% { transform: rotate(3deg);}
+	100% { transform: rotate(0deg);}
+}
+@-webkit-keyframes reSwing {
+	0 { -webkit-transform: rotate(0deg);}
+	25% { -webkit-transform: rotate(-3deg);}
+	75% { -webkit-transform: rotate(3deg);}
+	100% { -webkit-transform: rotate(0deg);}
+}
+
+
